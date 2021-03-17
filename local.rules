@@ -1,0 +1,10 @@
+ruletype multi
+{
+type alert
+output alert_syslog: LOG_AUTH LOG_ALERT
+output log_tcpdump: snort.log
+}
+
+multi tcp any any -> any any (msg:"Severity One rule-test for Snort"; content:"sev1"; nocase; )
+
+alert tcp any any -> any any (msg:"Severity Two rule-test for Snort"; content:"normal"; nocase; )
