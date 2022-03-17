@@ -1,5 +1,5 @@
 log tcp 192.168.0.0/24 22 -> any any
-alert icmp any any → any any (msg:”ICMP Ping attack detected PSUIDHERE”; dsize: > 65506; itype:8; icode:0; sid:1234567;)
+alert icmp any any -> any any (msg:”ICMP Ping attack detected PSUIDHERE”; dsize: > 65506; itype:8; icode:0; sid:1234567;)
 alert tcp any any -> 192.168.0.0/24 80 (content: "cgi-bin/default.idea"; msg: "Code Red Worm!" ; sid:1000001;)
 alert tcp any any -> 192.168.0.0/24 111 (content:"|00 01 86 a5|"; msg: "mountd access"; sid:1000002;)
 alert tcp any any -> any 21 (content:"site exec"; content:"%"; msg:"site exec buffer overflow attempt"; sid:1000003;)
