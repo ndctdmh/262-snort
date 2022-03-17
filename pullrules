@@ -1,2 +1,0 @@
-sudo wget https://www.snort.org/downloads/community/community-rules.tar.gz -O community-rules.tar.gz
-sudo tar -xvzf community-rules.tar.gz -C /etc/nsm/rules
