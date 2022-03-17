@@ -1,0 +1,1 @@
+sudo snort -A console -q -c /etc/nsm/plabsonion1-eth0/snort.conf -i eth0
